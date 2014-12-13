@@ -2,12 +2,26 @@ package ytf;
 
 public class TestDemo {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("Hello, World!");
+	private Test test;
+
+	public TestDemo(Test test) {
+		this.test = test;
 	}
 
-	public class Test {
+	@Override
+	public String toString() {
+		return test.toString();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name = "Skywalker";
+		String id = "534243196312307654";
+		TestDemo testDemo = new TestDemo(new TestDemo.Test(name, id));
+		System.out.println(testDemo.toString());
+	}
+
+	public static class Test {
 		String name;
 		String id;
 
